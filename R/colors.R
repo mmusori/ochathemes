@@ -19,7 +19,7 @@
 #' 
 #' # Make a histogram using the McCrea Collins Street palette
 #' ggplot(df, aes(x, fill=cl)) + geom_histogram() +
-#'   scale_fill_ocha(palette="mccrea")
+#'   scale_fill_ocha(palette = "tan")
 #'
 #' @export
 ocha_palettes <-
@@ -58,9 +58,9 @@ ocha_palettes <-
       )
 
 
-#' ochre palette with ramped colours
+#' ocha palette with ramped colours
 #'
-#' @param palette Choose from 'ochre_palettes' list
+#' @param palette Choose from 'ocha_palettes' list
 #'
 #' @param alpha transparency
 #'

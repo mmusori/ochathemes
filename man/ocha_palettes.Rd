@@ -28,7 +28,7 @@ ggplot(df, aes(x, y, colour=cl, shape=cl)) +
 
 # Make a histogram using the McCrea Collins Street palette
 ggplot(df, aes(x, fill=cl)) + geom_histogram() +
-  scale_fill_ocha(palette="mccrea")
+  scale_fill_ocha(palette = "tan")
 
 }
 \keyword{datasets}

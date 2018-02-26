@@ -2,19 +2,19 @@
 % Please edit documentation in R/colors.R
 \name{ocha_pal}
 \alias{ocha_pal}
-\title{ochre palette with ramped colours}
+\title{ocha palette with ramped colours}
 \usage{
 ocha_pal(palette = "blue", alpha = 1, reverse = FALSE)
 }
 \arguments{
-\item{palette}{Choose from 'ochre_palettes' list}
+\item{palette}{Choose from 'ocha_palettes' list}
 
 \item{alpha}{transparency}
 
 \item{reverse}{If TRUE, the direction of the colours is reversed.}
 }
 \description{
-ochre palette with ramped colours
+ocha palette with ramped colours
 }
 \examples{
 library(scales)

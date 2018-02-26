@@ -1,29 +1,5 @@
-#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typography
+#' A ggplot2 theme with opinionated defaults based on hrbrthemes
 #'
-#' Also has a "dark" / "modern" version for the new RStudio theme
-#'
-#' @md
-#' @section Why Arial Narrow?:
-#' First and foremost, Arial Narrow is generally installed by default or readily
-#' available on any modern system, so it's "free"-ish; plus, it is a condensed font
-#' with solid default kerning pairs and geometric numbers.
-#'
-#' @section Building upon `theme_ocha`:
-#' The function is setup in such a way that you can customize your own one by just
-#' wrapping the call and changing the parameters. See source for examples.
-#'
-#' @section Gotchas:
-#' There are distinctions between font names and various devices. Names that work
-#' for display graphics devices and bitmap ones such as `png` may not work well
-#' for PostScript or PDF ones. You may need two versions of a font-based
-#' theme function for them to work in a particular situation. This situation
-#' usually only arises when using a newer font with many weights but somewhat
-#' irregular internal font name patterns.
-#'
-#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
-#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
-#' devices. If you are running under Windows, the package calls the same function
-#' to register non-core fonts with the Windows graphics device.
 #'
 #' @md
 #' @param base_family,base_size base font family and size
@@ -180,11 +156,3 @@ update_geom_font_defaults <- function(family = "Arial Narrow", face = "plain", s
   update_geom_defaults("text", list(family = family, face = face, size = size, color = color))
   update_geom_defaults("label", list(family = family, face = face, size = size, color = color))
 }
-
-#' @rdname ArialNarrow
-#' @md
-#' @title Arial Narrow font name R variable aliases
-#' @description `font_an` == "`Arial Narrow`"
-#' @format length 1 character vector
-#' @export
-font_an <- "Arial Narrow"
