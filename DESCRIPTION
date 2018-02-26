@@ -1,0 +1,31 @@
+Package: ochathemes
+Type: Package
+Title: OCHA Themes, Theme Components and Utilities for 'ggplot2'
+Version: 0.0.9000
+Date: 2018-01-15
+Authors@R: c(
+    person("Ahmadou", "Dicko", email = "ahmadou@gmail.com", role = c("aut", "cre")))
+Maintainer: Ahmadou Dicko <dicko.ahmadou@gmail.com>
+Description: A compilation of extra 'ggplot2' themes, scales and utilities.
+URL: http://gitlab.com/dickoa/ochathemes
+BugReports: https://gitlab.com/dickoa/ochathemes/issues
+Copyright: file inst/COPYRIGHTS
+License: MIT + file LICENSE
+Encoding: UTF-8
+Suggests:
+    testthat,
+    dplyr,
+    svglite
+clipboardDepends:
+    R (>= 3.2.0)
+Imports:
+    ggplot2 (>= 2.2.1),
+    grid,
+    scales,
+    knitr,
+    rmarkdown,
+    htmltools,
+    tools,
+    magrittr
+RoxygenNote: 6.0.1.9000
+VignetteBuilder: knitr
