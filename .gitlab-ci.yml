@@ -7,11 +7,10 @@ pages:
     - add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
     - apt-get install -t unstable --yes libcurl4-openssl-dev libssl-dev git libmagick++-dev pandoc pandoc-citeproc
   script:
-    - Rscript -e 'install.packages("devtools")'
+    - Rscript -e 'install.packages(c("devtools", "pkgdown", "remotes))'
     - Rscript -e 'devtools::install_dev_deps()'
-    - Rscript -e 'devtools::install_github("hadley/pkgdown")'
-    - Rscript -e 'devtools::install_git("https://gitlab.com/dickoa/ochathemes")'
-    - Rscript -e 'pkgdown::build_site(path = "public")'
+    - Rscript -e 'remotes::install_gitlab("dickoa/ochathemes")'
+    - Rscript -e 'pkgdown::build_site()'
   artifacts:
     paths:
     - public
