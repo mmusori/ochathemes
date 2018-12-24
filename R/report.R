@@ -22,12 +22,13 @@ report <- function(number_sections = FALSE,
                    keep_md = FALSE,
                    lib_dir = NULL,
                    md_extensions = NULL,
-                   pandoc_args = rmarkdown::pandoc_variable_arg("logo", system.file("rmarkdown", "templates", "report", "resources", "img", "logo-unocha.svg", package = "ochathemes")),
+                   pandoc_args = NULL,
                    ...) {
 
     theme <- NULL
     template <- "default"
     code_folding <- "none"
+    pandoc_args  <- c(pandoc_args, rmarkdown::pandoc_variable_arg("logo", system.file("rmarkdown", "templates", "report", "resources", "img", "logo-unocha.svg", package = "ochathemes")))
     
     dep <- htmltools::htmlDependency(
                           name = "report",
