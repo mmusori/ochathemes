@@ -4,7 +4,7 @@
 \name{ocha_palettes}
 \alias{ocha_palettes}
 \title{UN OCHA Visual Unit Color Palettes}
-\format{An object of class \code{list} of length 4.}
+\format{An object of class \code{list} of length 9.}
 \usage{
 ocha_palettes
 }

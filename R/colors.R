@@ -97,7 +97,6 @@ ocha_palettes <-
            tan7 = "#F8F4EC")
        )
 
-
 #' ocha palette with ramped colours
 #'
 #' @param palette Choose from 'ocha_palettes' list
