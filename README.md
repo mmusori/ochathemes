@@ -18,8 +18,8 @@ This package is not on yet on CRAN and to install it, you will need the
 [`devtools`](https://github.com/r-lib/devtools) package.
 
 ``` r
-## install.packages("devtools") 
-devtools::install_git("https://gitlab.com/dickoa/ochathemes")
+## install.packages("remotes") 
+remotes::install_gitlab("dickoa/ochathemes")
 ```
 
 ``` r
