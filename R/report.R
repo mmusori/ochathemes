@@ -32,7 +32,8 @@ report <- function(number_sections = FALSE,
     dep <- htmltools::htmlDependency(
                           name = "report",
                           version = "0.1.0",
-                          system.file("rmarkdown", "templates", "report", "resources", package = "ochathemes")
+                          system.file("rmarkdown", "templates", "report", "resources", package = "ochathemes"),
+                          stylesheet = "report.css"
                       )
 
     extra_dependencies <- append(extra_dependencies, list(dep))
@@ -43,7 +44,7 @@ report <- function(number_sections = FALSE,
     args <- c(
         args, "--template",
         rmarkdown::pandoc_path_arg(
-                       system.file("rmarkdown", "templates", "report", "base.html", package = "hrbrthemes")
+                       system.file("rmarkdown", "templates", "report", "base.html", package = "ochathemes")
                    )
     )
 
@@ -59,25 +60,24 @@ report <- function(number_sections = FALSE,
         args <- c()
         args <- c(
             args,
-            pandoc_html_highlight_args(highlight, template, self_contained, lib_dir, output_dir)
+            rmarkdown:::pandoc_html_highlight_args(template, highlight)
         )
         args <- c(
             args,
-            includes_to_pandoc_args(
-                includes = includes, filter = if (identical(runtime, "shiny")) normalize_path else identity
-            )
+            rmarkdown::includes_to_pandoc_args(
+                           includes = includes, filter = if (identical(runtime, "shiny")) normalize_path else identity
+                       )
         )
         args
-
     }
-
+    
     rmarkdown::output_format(
                    knitr = rmarkdown::knitr_options_html(
                                           fig_width, fig_height, fig_retina, keep_md, dev
                                       ),
                    pandoc = rmarkdown::pandoc_options(
                                            to = "html",
-                                           from = from_rmarkdown(fig_caption, md_extensions),
+                                           from = rmarkdown::from_rmarkdown(fig_caption, md_extensions),
                                            args = args
                                        ),
                    keep_md = keep_md,

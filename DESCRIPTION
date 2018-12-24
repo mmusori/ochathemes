@@ -4,9 +4,9 @@ Title: OCHA Themes, Theme Components and Utilities for 'ggplot2'
 Version: 0.0.9000
 Date: 2018-01-15
 Authors@R: c(
-    person("Ahmadou", "Dicko", email = "ahmadou@gmail.com", role = c("aut", "cre")))
-Maintainer: Ahmadou Dicko <dicko.ahmadou@gmail.com>
-Description: A compilation of extra 'ggplot2' themes, scales and utilities.
+    person("Ahmadou", "Dicko", email = "mail@ahmadoudicko.com", role = c("aut", "cre")))
+Maintainer: Ahmadou Dicko <mail@ahmadoudicko.com>
+Description: A compilation of extra 'ggplot2' themes and 'rmarkdown' templates.
 URL: http://gitlab.com/dickoa/ochathemes
 BugReports: https://gitlab.com/dickoa/ochathemes/issues
 Copyright: file inst/COPYRIGHTS
@@ -29,3 +29,4 @@ Imports:
     magrittr
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr
+LazyData: true
