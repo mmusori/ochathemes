@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$>
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$" />
+    $endfor$
+
+    $if(date-meta)$
+    <meta name="date" content="$date-meta$" />
+    $endif$
+
+    <title>$if(title)$$title$$endif$</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"/>
+
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+
+    $if(highlightjs)$
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet"
+	  href="$highlightjs$/$if(highlightjs-theme)$$highlightjs-theme$$else$default$endif$.css"
+	  $if(html5)$$else$type="text/css" $endif$/>
+    <script src="$highlightjs$/highlight.js"></script>
+    <script type="text/javascript">
+      if (window.hljs && document.readyState && document.readyState === "complete") {
+	  window.setTimeout(function() {
+	      hljs.initHighlighting();
+	  }, 0);
+      }
+    </script>
+    $endif$
+
+    $if(highlighting-css)$
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+      $highlighting-css$
+    </style>
+    $endif$
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+    $endfor$
+
+  </head>
+
+
+  
+  <body>
+    <table style="width: 100%; border-bottom-color: rgb(65, 143, 222); border-bottom-width: 4px; border-bottom-style: solid;">
+      <tbody>
+	<tr>
+	  <td style="width: 75px; padding-right: 20px;"><img data-file-id="1837" height="87" src="https://gallery.mailchimp.com/547a787708d32a96a42c77746/images/b688341d-a56b-49df-8fa0-6c72963d9f67.png" style="margin: 0px; border: 0px currentColor; border-image: none; width: 75px; height: 87px;" width="75" /></td>
+	  <td style="padding-left: 20px; border-left-color: rgb(65, 143, 222); border-left-width: 2px; border-left-style: solid;"><span style="color:rgb(65, 143, 222); font-family:roboto condensed,arial; font-size:24px; font-weight:bolder; line-height:26px">$if(title)$$title$$endif$ </span><br />
+	    <span style="color:rgb(65, 143, 222); font-family:roboto condensed,arial; font-size:18px">$if(office-meta)$$office-meta$$office-meta$</span><br />
+	    <em style="color:rgb(65, 143, 222); font-family:roboto condensed,arial; font-size:14px; font-style:italic">$if(date-meta)$$date-meta$$endif$</em></td>
+	</tr>
+	<tr style="height: 5px;">
+	  <td style="height: 5px;">&nbsp;</td>
+	</tr>
+	<tr>
+	</tr>
+      </tbody>
+    </table>
+
+    $body$
+
+    $for(include-after)$
+    $include-after$
+    $endfor$
+
+</div>
+
+$if(mathjax-url)$
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "$mathjax-url$";
+      document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+$endif$
+
+
+
+<body>
+</html>
