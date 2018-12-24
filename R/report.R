@@ -14,7 +14,7 @@ report <- function(number_sections = FALSE,
                    dev = 'png',
                    smart = TRUE,
                    self_contained = TRUE,
-                   highlight = "default",
+                   highlight = "pygment",
                    mathjax = "default",
                    extra_dependencies = NULL,
                    css = NULL,
@@ -22,13 +22,13 @@ report <- function(number_sections = FALSE,
                    keep_md = FALSE,
                    lib_dir = NULL,
                    md_extensions = NULL,
-                   pandoc_args = NULL,
+                   pandoc_args = rmarkdown::pandoc_variable_arg("logo", system.file("rmarkdown", "templates", "report", "resources", "img", "logo-unocha.svg", package = "ochathemes")),
                    ...) {
 
     theme <- NULL
     template <- "default"
     code_folding <- "none"
-
+    
     dep <- htmltools::htmlDependency(
                           name = "report",
                           version = "0.1.0",
@@ -37,8 +37,7 @@ report <- function(number_sections = FALSE,
                       )
 
     extra_dependencies <- append(extra_dependencies, list(dep))
-
-
+    
     args <- c("--standalone")
     args <- c(args, "--section-divs")
     args <- c(
@@ -51,7 +50,7 @@ report <- function(number_sections = FALSE,
     if (number_sections) args <- c(args, "--number-sections")
 
     for (css_file in css) args <- c(args, "--css", rmarkdown::pandoc_path_arg(css_file))
-
+    
     pre_processor <- function(metadata, input_file, runtime,
                               knit_meta, files_dir, output_dir) {
 
@@ -92,6 +91,7 @@ report <- function(number_sections = FALSE,
                                                 template = template,
                                                 pandoc_args = pandoc_args,
                                                 extra_dependencies = extra_dependencies,
+                                                bootstrap_compatible = TRUE,
                                                 ...
                                             )
                )

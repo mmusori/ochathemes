@@ -1,11 +1,9 @@
 ---
-title: "Situation report"
+title: "Gondwana"
+subtitle: "Situation report"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-ocha_meta:
-  office: "OCHA Gondwana"
 output:
-  ochathemes::report:
-    highlight: pygment
+  ochathemes::report
 ---
 
 ```{r include=FALSE}
