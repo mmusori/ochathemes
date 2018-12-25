@@ -51,9 +51,9 @@
 	<tbody>
 	  <tr>
 	    <td style="width: 75px; padding-right: 20px;"><img data-file-id="1837" height="87" src=$logo$ style="margin: 0px; border: 0px currentColor; border-image: none; width: 75px; height: 87px;" width="75" /></td>	  
-	    <td style="padding-left: 20px; border-left-color: #418fde; border-left-width: 2px; border-left-style: solid;"><span style="color:#418fde; font-family:roboto condensed,sans-serif; font-weight: 700; text-transform:uppercase; font-size:24px; line-height:26px">$if(title)$$title$$endif$ </span><br />
-	      <span style="color:#418fde; font-family:roboto condensed,sans-serif; font-weight: 400; font-size:18">$if(subtitle)$$subtitle$$endif$ </span><br />
-	      <em style="color:#418fde; font-family:roboto,sans-serif; font-weight: 400; font-size:10; font-style:italic">As of $if(date)$$date$$endif$ </em></td>
+	    <td style="padding-left: 20px; border-left-color: #418fde; border-left-width: 2px; border-left-style: solid;"><span style="color:#418fde; font-family:roboto condensed,sans-serif; font-weight: 700; text-transform:uppercase; font-size:2em; line-height:26px">$if(title)$$title$$endif$ </span><br />
+	      <span style="color:#418fde; font-family:roboto condensed,sans-serif; font-weight: 400; font-size:1.5em">$if(subtitle)$$subtitle$$endif$ </span><br />
+	      <em style="color:#418fde; font-family:roboto,sans-serif; font-weight: 400; font-size:1em; font-style:italic">As of $if(date)$$date$$endif$ </em></td>
 	  </tr>
 	  <tr style="height: 5px;">
 	    <td style="height: 5px;"></td>
@@ -69,6 +69,18 @@
     $include-after$
     $endfor$
 
+      <footer>
+	<table style="width: 100%; border-top-color: #418fde; border-top-width: 2px; border-top-style: solid; font-family:roboto,sans-serif; font-weight: 400; font-size:0.5em; font-style:italic">
+	  <tr>
+	    <td>The boundaries and names shown and the designations used on this map do not imply ofﬁcial endorsement or acceptance by the United Nations</td>
+	  </tr>
+	  <tr>
+	    <td>Creation date: $if(date)$$date$$endif$ Sources: XXXX, XXXX, XXXX. Feedback: xxxx@un.org www.unocha.org www.reliefweb.int</td>
+	  </tr>
+	</table>
+      </footer>
+      
+      
     $if(mathjax-url)$
     <!-- dynamically load mathjax for compatibility with self-contained -->
     <script>
