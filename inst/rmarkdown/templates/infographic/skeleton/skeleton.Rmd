@@ -1,7 +1,10 @@
 ---
-title: "Gondwana"
-subtitle: "Situation report"
+title: "COUNTRY NAME"
+subtitle: "Sub-title"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
+footer:
+  sources: XXXX, XXXX, XXXX
+  feedback-email: xxx@un.org
 output:
   ochathemes::report
 ---

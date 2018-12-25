@@ -23,16 +23,6 @@ body {
        url('fonts/roboto-v18-latin-regular.woff2') format('woff2'),
        url('fonts/roboto-v18-latin-regular.woff') format('woff');
 }
-/* roboto-italic - latin */
-/*@font-face {
-  font-display: swap;
-  font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Roboto Italic'), local('Roboto-Italic'),
-       url('fonts/roboto-v18-latin-italic.woff2') format('woff2'),
-       url('fonts/roboto-v18-latin-italic.woff') format('woff');
-}*/
 /* roboto-700 - latin */
 @font-face {
   font-display: swap;
@@ -51,8 +41,8 @@ body {
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-       url('fonts/roboto-condensed-v16-latin-regular.woff2') format('woff2'),
-       url('fonts/roboto-condensed-v16-latin-regular.woff') format('woff');
+       url('fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'),
+       url('fonts/roboto-slab-v7-latin-regular.woff') format('woff');
 }
 /* roboto-condensed-700 - latin */
 @font-face {
@@ -61,6 +51,48 @@ body {
   font-style: normal;
   font-weight: 700;
   src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
-       url('fonts/roboto-condensed-v16-latin-700.woff2') format('woff2'),
-       url('fonts/roboto-condensed-v16-latin-700.woff') format('woff');
+       url('fonts/roboto-slab-v7-latin-700.woff2') format('woff2'),
+       url('fonts/roboto-slab-v7-latin-700.woff') format('woff');
+}
+/* DOWNLOAD URL: https://google-webfonts-helper.herokuapp.comfonts/roboto-slab?subsets=latin */
+/* roboto-slab-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab'), local('RobotoSlab-Regular'),
+       url('fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'),
+       url('fonts/roboto-slab-v7-latin-regular.woff') format('woff');
+}
+/* roboto-slab-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'),
+       url('fonts/roboto-slab-v7-latin-700.woff2') format('woff2'),
+       url('fonts/roboto-slab-v7-latin-700.woff') format('woff');
+}
+/* DOWNLOAD URL: https://google-webfonts-helper.herokuapp.com/fonts/crimson-text?subsets=latin */
+/* crimson-text-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Crimson Text'), local('CrimsonText-Regular'),
+       url('fonts/crimson-text-v8-latin-regular.woff2') format('woff2'),
+       url('fonts/crimson-text-v8-latin-regular.woff') format('woff');
+}
+/* crimson-text-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Crimson Text Bold'), local('CrimsonText-Bold'),
+       url('fonts/crimson-text-v8-latin-700.woff2') format('woff2'),
+       url('fonts/crimson-text-v8-latin-700.woff') format('woff');
 }
