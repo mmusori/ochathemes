@@ -1,4 +1,4 @@
-name: OCHA report Roboto Template
+name: OCHA digital report template
 description: >
-  R Markdown template for the new OCHA digital report with an emphasis on typography using Roboto family fonts
+  R Markdown template for the new OCHA digital report.
 create_dir: false

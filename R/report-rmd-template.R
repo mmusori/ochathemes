@@ -1,6 +1,6 @@
 #' OCHA digital report R markdown template
 #'
-#' Template for creating an R markdown based OCHA digital report with an emphasis on typography
+#' Template for creating an R markdown based OCHA digital report
 #'
 #' @inheritParams rmarkdown::html_document
 #' @param extra_dependencies,... Additional function arguments to pass to the
