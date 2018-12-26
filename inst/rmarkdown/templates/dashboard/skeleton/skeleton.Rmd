@@ -1,12 +1,13 @@
 ---
 title: "COUNTRY NAME"
 subtitle: "Sub-title"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 footer:
   sources: XXXX, XXXX, XXXX
   feedback-email: xxx@un.org
 output:
-  ochathemes::report
+  ochathemes::dashboard:
+    orientation: rows
 ---
 
 ```{r include=FALSE}
@@ -17,21 +18,30 @@ knitr::opts_chunk$set(fig.retina=2)
 library(ochathemes)
 library(tidyverse)
 library(humicons)
+library(plotly)
+library(htmltools)
 ```
 
-# `r humicons::hi("Cyclone", color = "#418FDE")`
+`r humicons::hi("Cyclone", color = "#418FDE")`
+================================================================================
+
+Row
+-----------------------------------------------------------------------
 
 We can use OCHA Humanitarian icons v2 directly in `rmarkdown` document or `ggplot2`
 
-```{r, fig.show='hold'}
-car <- get_humicon("Car")
 
-ggplot(mtcars, aes(wt, mpg)) +
+```{r, fig.show = 'hold'}
+car <- get_humicon("Car")
+p <- ggplot(mtcars, aes(wt, mpg)) +
   geom_text(family = "Humanitarian-Icons-v02", label = car, color = "#418FDE") +
   labs(title="mtcars again, it seems") +
   theme_ocha_rc(grid="XY")
-
+p
 ```
+
+Row
+-----------------------------------------------------------------------
 
 ```{r bib, include=FALSE}
 # KEEP THIS AT THE END OF THE DOCUMENT TO GENERATE A LOCAL bib FILE FOR PKGS USED
