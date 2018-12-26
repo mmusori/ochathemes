@@ -103,7 +103,7 @@ body {
 
 .section.sidebar {
   top: 51px;
-  background-color: rgba(39, 128, 227, 0.1);
+  background-color: rgba(65,143,222, 0.8);
 }
 
 .value-box {
@@ -111,31 +111,31 @@ body {
 }
 
 .bg-primary {
-  background-color: rgba(39, 128, 227, 0.7);
+  background-color: rgba(65,143,222, 0.8);
 }
 
 .storyboard-nav .sbframelist ul li.active {
-  background-color: rgba(39, 128, 227, 0.7);
+  background-color: rgba(65,143,222, 0.8);
 }
 
 .nav-tabs-custom > .nav-tabs > li.active {
-  border-top-color: rgba(39, 128, 227, 0.7);
+  border-top-color: rgba(65,143,222, 0.8);
 }
 
 .bg-info {
-  background-color: rgba(153, 84, 187, 0.7);
+  background-color: rgba(144,99,205, 0.8);
 }
 
 .bg-warning {
-  background-color: rgba(255, 117, 24, 0.7);
+  background-color: rgba(229,106,84, 0.8);
 }
 
 .bg-danger {
-  background-color: rgba(255, 0, 57, 0.7);
+  background-color: rgba(205,58,31, 0.8);
 }
 
 .bg-success {
-  background-color: rgba(63, 182, 24, 0.7);
+  background-color: rgba(127,185,47, 0.8);
 }
 
 .chart-title {
