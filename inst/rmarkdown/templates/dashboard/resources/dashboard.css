@@ -1,7 +1,7 @@
 body {
+    padding-top: 7rem;
     background: #ffffff;
     color: #333;
-    padding-top: 2rem;
     font-size: 100%;
     text-rendering: optimizeLegibility;
     -moz-font-feature-settings:"onum" 1;
@@ -10,8 +10,6 @@ body {
     -webkit-font-feature-settings:"onum" 1;
     font-feature-settings:"onum" 1;
 }
-
-
 /* * DOWNLOAD URL: https://google-webfonts-helper.herokuapp.comfonts/roboto?subsets=latin *\/ */
 /* roboto-regular - latin */
 @font-face {
@@ -97,47 +95,34 @@ body {
        url('fonts/crimson-text-v8-latin-700.woff') format('woff');
 }
 /*OCHA dashboard theme*/
-body {
-  padding-top: 60px;
-}
-
 .section.sidebar {
   top: 51px;
   background-color: rgba(65,143,222, 0.8);
 }
-
 .value-box {
   color: #f9f9f9;
 }
-
 .bg-primary {
   background-color: rgba(65,143,222, 0.8);
 }
-
 .storyboard-nav .sbframelist ul li.active {
   background-color: rgba(65,143,222, 0.8);
 }
-
 .nav-tabs-custom > .nav-tabs > li.active {
   border-top-color: rgba(65,143,222, 0.8);
 }
-
 .bg-info {
   background-color: rgba(144,99,205, 0.8);
 }
-
 .bg-warning {
   background-color: rgba(229,106,84, 0.8);
 }
-
 .bg-danger {
   background-color: rgba(205,58,31, 0.8);
 }
-
 .bg-success {
   background-color: rgba(127,185,47, 0.8);
 }
-
 .chart-title {
   font-weight: 500;
 }
@@ -154,6 +139,8 @@ body {
 }
 .navbar-inverse .navbar-brand {
     color: #418fde;
+    margin-top:-1rem;
+    margin-bottom:1rem;
 }
 .navbar-author {
   font-size: 1em;
@@ -169,10 +156,13 @@ body {
 .navbar-inverse .navbar-nav > li > a {
   color: #418fde;
 }
-.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ffffff;
+    background-color: #418fde;
+}
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: #418fde;
+    color: #ffffff;
+    background-color: #418fde;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -253,10 +243,28 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #418fde;
 }
-
 .navbar-inverse .navbar-logo {
     border-right-color: #418fde;
     border-right-style: solid;
+    margin-top: 3px;
     margin-bottom: 3px;
     margin-right: 10px;
 }
+.dashboard-foonote {
+    /* width: 100%; */
+    border-top-color: #418fde;
+    border-top-width: 2px;
+    border-top-style: solid;
+    font-family:roboto,sans-serif;
+    font-weight: 400;
+    font-size:0.5em;
+    font-style:italic;
+}
+.dashboard-date {
+    color: #418fde;
+    font-family:roboto,sans-serif;
+    font-weight: 400;
+    font-size:1.2em;
+    font-style:italic;
+}
+

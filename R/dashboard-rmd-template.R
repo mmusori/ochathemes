@@ -79,6 +79,8 @@ dashboard <- function(fig_width = 6.0,
                       self_contained = TRUE,
                       favicon = NULL,
                       social = NULL,
+                      sources = NULL,
+                      feedback_email = NULL,
                       source_code = NULL,
                       orientation = c("columns", "rows"),
                       vertical_layout = c("fill", "scroll"),
@@ -94,10 +96,11 @@ dashboard <- function(fig_width = 6.0,
                       devel = FALSE,
                       ...) {
 
+    favicon <- system.file("rmarkdown", "templates", "dashboard", "resources", "img", "favicon.ico", package = "ochathemes")
     logo <- system.file("rmarkdown", "templates", "dashboard", "resources", "img", "logo-unocha.png", package = "ochathemes")
     template <- system.file("rmarkdown", "templates", "dashboard", "default.html", package = "ochathemes")
-    extra_css <- system.file("rmarkdown", "templates", "dashboard", "resources", "dashboard.css", package = "ochathemes")
-    ## css <- list(css, extra_css)
+    extra_css <- system.file("rmarkdown", "templates", "dashboard", "resources", "dashboard.css", package = "ochathemes")   
+    extra_pandoc_args <- c("--variable", paste0("feedback-email=", feedback_email), "--variable", paste0("sources=", sources))
     css <- c(css, extra_css)
     
     r <- flexdashboard::flex_dashboard(
@@ -127,6 +130,7 @@ dashboard <- function(fig_width = 6.0,
 
     id <- grep("^--template", r$pandoc$args)
     r$pandoc$args[id + 1] <- template
+    r$pandoc$args <- c(pandoc_args, extra_pandoc_args, r$pandoc$args)
     r
 }
 

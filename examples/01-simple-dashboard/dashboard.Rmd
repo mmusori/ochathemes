@@ -1,10 +1,13 @@
 ---
-title: "OCHA dashboard template"  
+title: "OCHA ROWCA"
+subtitle: "Cash dashboard"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
 output:
   ochathemes::dashboard:
     orientation: rows
+    feedback_email: "xxx@un.org"
+    sources: "XXXX, XXXX, XXXX"
 ---
-
 
 ```{r setup, include=FALSE}
 library(ggplot2)

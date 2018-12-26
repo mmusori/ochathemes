@@ -7,12 +7,12 @@
 dashboard(fig_width = 6, fig_height = 4.8, fig_retina = 2,
   fig_mobile = TRUE, dev = "png", smart = TRUE,
   self_contained = TRUE, favicon = NULL, social = NULL,
-  source_code = NULL, orientation = c("columns", "rows"),
-  vertical_layout = c("fill", "scroll"), storyboard = FALSE,
-  highlight = "default", mathjax = "default",
-  extra_dependencies = NULL, css = NULL, includes = NULL,
-  lib_dir = NULL, md_extensions = NULL, pandoc_args = NULL,
-  devel = FALSE, ...)
+  sources = NULL, feedback_email = NULL, source_code = NULL,
+  orientation = c("columns", "rows"), vertical_layout = c("fill",
+  "scroll"), storyboard = FALSE, highlight = "default",
+  mathjax = "default", extra_dependencies = NULL, css = NULL,
+  includes = NULL, lib_dir = NULL, md_extensions = NULL,
+  pandoc_args = NULL, devel = FALSE, ...)
 }
 \arguments{
 \item{fig_width}{Default width (in inches) for figures}
