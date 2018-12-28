@@ -52,7 +52,7 @@ theme_ocha_rsl(base_family = "Roboto Slab", base_size = 11.5,
 \item{ticks}{ticks if \code{TRUE} add ticks}
 }
 \description{
-You should \url{import_roboto_condensed} first and also install the fonts on your
+You should \url{import_roboto_slab} first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{

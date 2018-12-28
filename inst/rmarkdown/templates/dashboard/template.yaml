@@ -1,4 +1,4 @@
-name: OCHA infographic html template
+name: OCHA dashboard template
 description: >
-  R Markdown template OCHA infographic template.
+  R Markdown template to design dashboard inspired by OCHA visual style.
 create_dir: false

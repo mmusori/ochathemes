@@ -1,18 +1,17 @@
 #' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
-#' You should [import_roboto_condensed]() first and also install the fonts on your
+#' You should [import_roboto_slab]() first and also install the fonts on your
 #' system before trying to use this theme.
 #'
-#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+#' There is an option `ochathemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
 #' devices. If you are running under Windows, the package calls the same function
 #' to register non-core fonts with the Windows graphics device.
 #'
 #' @md
 #' @section Why Roboto Slab?:
-#' It's free, has tolerable kerning pairs and multiple weights. It's also different
-#' than Arial Narrow and the fonts most folks use in ggplot2 charts.
-#'
+#' It's free, has tolerable kerning pairs and multiple weights.
+#' 
 #' @md
 #' @param base_family,base_size base font family and size
 #' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
@@ -68,7 +67,7 @@ theme_ocha_rsl <- function(
   subtitle_face = "plain", subtitle_margin = 15,
   strip_text_family = base_family, strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family=if (.Platform$OS.type == "windows") "Roboto Slab" else "Roboto Slab Light",
+  caption_family = if (.Platform$OS.type == "windows") "Roboto Slab" else "Roboto Slab Light",
   caption_size = 9,
   caption_face = "plain", caption_margin = 10,
   axis_text_size = base_size,

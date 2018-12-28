@@ -10,8 +10,7 @@
 #'
 #' @md
 #' @section Why Roboto Condensed?:
-#' It's free, has tolerable kerning pairs and multiple weights. It's also different
-#' than Arial Narrow and the fonts most folks use in ggplot2 charts.
+#' It's free, has tolerable kerning pairs and multiple weights.
 #'
 #' @md
 #' @param base_family,base_size base font family and size
@@ -41,7 +40,7 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ocha_rc()
+#'   theme_ocha()
 #'
 #' # seminal bar chart
 #'
@@ -56,10 +55,10 @@
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ocha_rc(grid="Y") +
+#'   theme_ocha(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ocha_rc <- function(
+theme_ocha <- function(
   base_family = "Roboto Condensed", base_size = 11.5,
   plot_title_family = base_family, plot_title_size = 18,
   plot_title_face = "bold", plot_title_margin = 10,
@@ -68,7 +67,7 @@ theme_ocha_rc <- function(
   subtitle_face = "plain", subtitle_margin = 15,
   strip_text_family = base_family, strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family=if (.Platform$OS.type == "windows") "Roboto Condensed" else "Roboto Condensed Light",
+  caption_family = if (.Platform$OS.type == "windows") "Roboto Condensed" else "Roboto Condensed Light",
   caption_size = 9,
   caption_face = "plain", caption_margin = 10,
   axis_text_size = base_size,

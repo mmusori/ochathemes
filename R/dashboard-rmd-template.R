@@ -21,11 +21,6 @@
 #'@param favicon Path to graphic to be used as a favicon for the dashboard.
 #' Pass \code{NULL} to use no favicon.
 #'
-#'@param social Specify a character vector of social sharing services to
-#'  automatically add sharing links for them on the \code{navbar}. Valid values
-#'  are "twitter", "facebook", "google-plus", "linkedin", and "pinterest" (more
-#'  than one service can be specified).
-#'
 #'@param source_code URL for source code of dashboard (used primarily for
 #'  publishing flexdashboard examples). Automatically creates a \code{navbar}
 #'  item which links to the source code.
@@ -78,7 +73,6 @@ dashboard <- function(fig_width = 6.0,
                       smart = TRUE,
                       self_contained = TRUE,
                       favicon = NULL,
-                      social = NULL,
                       sources = NULL,
                       feedback_email = NULL,
                       source_code = NULL,

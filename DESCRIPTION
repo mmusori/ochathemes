@@ -1,6 +1,6 @@
 Package: ochathemes
 Type: Package
-Title: 'ggplot2' themes and 'rmarkdown' templates based on OCHA graphics stylebook.
+Title: 'rmarkdown' templates and 'ggplot2' themes inspired by OCHA graphics stylebook.
 Version: 0.0.9000
 Date: 2018-12-27
 Authors@R: c(

@@ -1,19 +1,33 @@
-#' A ggplot2 theme with opinionated defaults based on hrbrthemes
+#' A precise & pristine [ggplot2] theme with opinionated defaults and an emphasis on typoghraphy
 #'
+#' You should [import_roboto_slab]() first and also install the fonts on your
+#' system before trying to use this theme.
+#'
+#' There is an option `ochathemes.loadfonts` which -- if set to `TRUE` -- will
+#' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
+#' devices. If you are running under Windows, the package calls the same function
+#' to register non-core fonts with the Windows graphics device.
+#'
+#' @md
+#' @section Why Crimson Text?:
+#' Crimson is an open source Google font used as a secondary
+#' font family to complement Roboto, especially in print
+#' production, in a long body text for its readability.
 #'
 #' @md
 #' @param base_family,base_size base font family and size
-#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot title family, face, size and margi
+#' @param plot_title_family,plot_title_face,plot_title_size,plot_title_margin plot tilte family, face, size and margin
 #' @param subtitle_family,subtitle_face,subtitle_size plot subtitle family, face and size
 #' @param subtitle_margin plot subtitle margin bottom (single numeric value)
 #' @param strip_text_family,strip_text_face,strip_text_size facet label font family, face and size
 #' @param caption_family,caption_face,caption_size,caption_margin plot caption family, face, size and margin
 #' @param axis_title_family,axis_title_face,axis_title_size axis title font family, face and size
-#' @param axis_title_just axis title font justification, one of `[blmcrt]`
-#' @param plot_margin plot margin (specify with [ggplot2::margin])
-#' @param grid_col,axis_col grid & axis colors; both default to `#cccccc`
-#' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
+#' @param axis_title_just axis title font justificationk one of `[blmcrt]`
 #' @param axis_text_size font size of axis text
+#' @param plot_margin plot margin (specify with [ggplot2::margin])
+#' @param grid_col grid color
+#' @param grid panel grid (`TRUE`, `FALSE`, or a combination of `X`, `x`, `Y`, `y`)
+#' @param axis_col axis color
 #' @param axis add x or y axes? `TRUE`, `FALSE`, "`xy`"
 #' @param ticks ticks if `TRUE` add ticks
 #' @export
@@ -28,36 +42,37 @@
 #'        title="Seminal ggplot2 scatterplot example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ocha()
+#'   theme_ocha_ct()
 #'
 #' # seminal bar chart
 #'
-#' update_geom_font_defaults()
+#' # note: make this font_ct on Windows
+#' update_geom_font_defaults(family = font_ct_light)
 #'
 #' count(mpg, class) %>%
 #'   ggplot(aes(class, n)) +
 #'   geom_col() +
 #'   geom_text(aes(label=n), nudge_y=3) +
-#'   labs(x="Fuel efficiency (mpg)", y="Weight (tons)",
+#'   labs(x="Fuel effiiency (mpg)", y="Weight (tons)",
 #'        title="Seminal ggplot2 bar chart example",
 #'        subtitle="A plot that is only useful for demonstration purposes",
 #'        caption="Brought to you by the letter 'g'") +
-#'   theme_ocha(grid="Y") +
+#'   theme_ocha_ct(grid="Y") +
 #'   theme(axis.text.y=element_blank())
 #' }
-theme_ocha <- function(
-  base_family = "IBMPlexSans", base_size = 11.5,
-  plot_title_family = "IBMPlexSans-Bold", plot_title_size = 18,
-  plot_title_face = "plain", plot_title_margin = 10,
-  subtitle_family = if (.Platform$OS.type == "windows") "IBMPlexSans" else "IBMPlexSans-Light",
+theme_ocha_ct <- function(
+  base_family = "Crimson Text", base_size = 11.5,
+  plot_title_family = base_family, plot_title_size = 18,
+  plot_title_face = "bold", plot_title_margin = 10,
+  subtitle_family = if (.Platform$OS.type == "windows") "Crimson Text" else "Crimson Text Light",
   subtitle_size = 13,
   subtitle_face = "plain", subtitle_margin = 15,
-  strip_text_family = "IBMPlexSans-Medium", strip_text_size = 12,
+  strip_text_family = base_family, strip_text_size = 12,
   strip_text_face = "plain",
-  caption_family = if (.Platform$OS.type == "windows") "IBMPlexSans" else "IBMPlexSans-Thin",
+  caption_family = if (.Platform$OS.type == "windows") "Crimson Text" else "Crimson Text Light",
   caption_size = 9,
   caption_face = "plain", caption_margin = 10,
-  axis_text_size = 9,
+  axis_text_size = base_size,
   axis_title_family = base_family,
   axis_title_size = 9,
   axis_title_face = "plain",
@@ -78,6 +93,7 @@ theme_ocha <- function(
     ret <- ret + theme(panel.grid.minor = element_line(color = grid_col, size = 0.15))
 
     if (inherits(grid, "character")) {
+      
       if (regexpr("X", grid)[1] < 0) ret <- ret + theme(panel.grid.major.x = element_blank())
       if (regexpr("Y", grid)[1] < 0) ret <- ret + theme(panel.grid.major.y = element_blank())
       if (regexpr("x", grid)[1] < 0) ret <- ret + theme(panel.grid.minor.x = element_blank())
@@ -103,11 +119,11 @@ theme_ocha <- function(
         ret <- ret + theme(axis.line.y = element_line(color = axis_col, size = 0.15))
       }
     } else {
-      ret <- ret + theme(axis.line.x = element_line(color = axis_col, size = 0.15))
-      ret <- ret + theme(axis.line.y = element_line(color = axis_col, size = 0.15))
+      ret <- ret + theme(axis.line.x=element_line(color = axis_col, size = 0.15))
+      ret <- ret + theme(axis.line.y=element_line(color = axis_col, size = 0.15))
     }
   } else {
-    ret <- ret + theme(axis.line = element_blank())
+    ret <- ret + theme(axis.line=element_blank())
   }
 
   if (!ticks) {
@@ -128,21 +144,21 @@ theme_ocha <- function(
   ret <- ret + theme(axis.text.y = element_text(size = axis_text_size, margin = margin(r = 0)))
   ret <- ret + theme(axis.title = element_text(size = axis_title_size, family = axis_title_family))
   ret <- ret + theme(axis.title.x = element_text(hjust = xj, size = axis_title_size,
-                                                 family = axis_title_family, face = axis_title_face))
+                                               family = axis_title_family, face = axis_title_face))
   ret <- ret + theme(axis.title.y = element_text(hjust = yj, size = axis_title_size,
                                                family = axis_title_family, face = axis_title_face))
   ret <- ret + theme(axis.title.y.right = element_text(hjust = yj, size = axis_title_size, angle = 90,
                                                      family = axis_title_family, face = axis_title_face))
   ret <- ret + theme(strip.text = element_text(hjust = 0, size = strip_text_size,
-                                               face = strip_text_face, family = strip_text_family))
+                                             face = strip_text_face, family = strip_text_family))
   ret <- ret + theme(panel.spacing = grid::unit(2, "lines"))
   ret <- ret + theme(plot.title = element_text(hjust = 0, size = plot_title_size,
-                                               margin = margin(b = plot_title_margin),
-                                               family = plot_title_family, face = plot_title_face))
+                                             margin = margin(b = plot_title_margin),
+                                             family = plot_title_family, face = plot_title_face))
   ret <- ret + theme(plot.subtitle = element_text(hjust = 0, size = subtitle_size,
-                                                  margin = margin(b = subtitle_margin),
-                                                  family = subtitle_family, face = subtitle_face))
-  ret <- ret + theme(plot.caption=element_text(hjust = 1, size = caption_size,
+                                                margin = margin(b = subtitle_margin),
+                                                family = subtitle_family, face = subtitle_face))
+  ret <- ret + theme(plot.caption = element_text(hjust = 1, size = caption_size,
                                                margin = margin(t = caption_margin),
                                                family = caption_family, face = caption_face))
   ret <- ret + theme(plot.margin = plot_margin)
@@ -151,11 +167,11 @@ theme_ocha <- function(
 
 }
 
-#' Import IBM Plex Sans font for use in charts
+#' Import Crimson Text font for use in charts
 #'
-#' IBM Plex Sans is a trademark of IBM and distributed under the SIL Open Font License, Version 1.1.
+#' Crimson Text is a trademark of Google.
 #'
-#' There is an option `hrbrthemes.loadfonts` which -- if set to `TRUE` -- will
+#' There is an option `ochathemes.loadfonts` which -- if set to `TRUE` -- will
 #' call `extrafont::loadfonts()` to register non-core fonts with R PDF & PostScript
 #' devices. If you are running under Windows, the package calls the same function
 #' to register non-core fonts with the Windows graphics device.
@@ -166,32 +182,32 @@ theme_ocha <- function(
 #'   recommended that you install them on your system the same way you would any
 #'   other font you wish to use in other programs.
 #' @export
-import_plex_sans <- function() {
+import_crimson_text <- function() {
 
-  ps_font_dir <- system.file("fonts", "plex-sans", package = "ochathemes")
+  ct_font_dir <- system.file("fonts", "crimson-text", package = "ochathemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(ps_font_dir, prompt=FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(ct_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
       "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      ps_font_dir)
+      ct_font_dir)
   )
 
 }
 
-#' @rdname PlexSans
+#' @rdname CrimsonText
 #' @md
-#' @title PlexSans font name R variable aliases
-#' @description `font_ps` == "`IBMPlexSans`"
+#' @title Crimson Text font name R variable aliases
+#' @description `font_ct` == "`Crimson Text`"
 #' @format length 1 character vector
 #' @export
-font_ps <- "IBMPlexSans"
+font_ct <- "Crimson Text"
 
-#' @rdname PlexSans
+#' @rdname CrimsonText
 #' @md
-#' @note `font_ps_light` (a.k.a. "`IBMPlexSans-Light`") is not available on
+#' @note `font_ct_light` (a.k.a. "`Crimson Text Light`") is not available on
 #'     Windows and will throw a warning if used in plots.
-#' @description `font_ps_light` == "`IBMPlexSans-Light`"
+#' @description `font_fc_light` == "`Crimson Text Light`"
 #' @export
-font_ps_light <- "IBMPlexSans-Light"
+font_ct_light <- "Crimson Text Light"
