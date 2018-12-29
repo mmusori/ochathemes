@@ -4,12 +4,12 @@
 \name{ochathemes-package}
 \alias{ochathemes-package}
 \alias{ochathemes}
-\title{Additional Themes and Theme Components for 'ggplot2'}
+\title{Additional Themes and Theme Components for 'ggplot2' based on OCHA graphic styles}
 \description{
 A compilation of extra themes and theme components for 'ggplot2'
 The core theme: `theme_ocha`
 }
 \author{
-\email{dicko.ahmadou@gmail.com}
+\email{mail@ahmadoudicko.com}
 }
 \keyword{package}

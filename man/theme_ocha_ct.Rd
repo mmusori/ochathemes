@@ -56,15 +56,16 @@ You should \url{import_roboto_slab} first and also install the fonts on your
 system before trying to use this theme.
 }
 \details{
-There is an option \code{hrbrthemes.loadfonts} which -- if set to \code{TRUE} -- will
+There is an option \code{ochathemes.loadfonts} which -- if set to \code{TRUE} -- will
 call \code{extrafont::loadfonts()} to register non-core fonts with R PDF & PostScript
 devices. If you are running under Windows, the package calls the same function
 to register non-core fonts with the Windows graphics device.
 }
 \section{Why Crimson Text?}{
 
-It's free, has tolerable kerning pairs and multiple weights. It's also different
-than Arial Narrow and the fonts most folks use in ggplot2 charts.
+Crimson is an open source Google font used as a secondary
+font family to complement Roboto, especially in print
+production, in a long body text for its readability.
 }
 
 \examples{

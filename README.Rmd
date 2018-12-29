@@ -56,7 +56,7 @@ knitr::opts_chunk$set(
 [![Codecov Code Coverage](https://codecov.io/gl/dickoa/ochathemes/branch/master/graph/badge.svg)](https://codecov.io/gl/dickoa/ochathemes)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-`ochathemes` is a `rmarkdown` templates and `ggplot2` themes inspired by OCHA graphics stylebook.
+`ochathemes` is package providing `ggplot2` themes and theme components inspired by OCHA graphics stylebook.
 
 ## Installation
 

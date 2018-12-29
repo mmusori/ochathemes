@@ -1,12 +1,12 @@
 Package: ochathemes
 Type: Package
-Title: 'rmarkdown' templates and 'ggplot2' themes inspired by OCHA graphics stylebook.
+Title: 'ggplot2' themes and and theme components inspired by OCHA graphics stylebook.
 Version: 0.0.9000
 Date: 2018-12-27
 Authors@R: c(
     person("Ahmadou", "Dicko", email = "mail@ahmadoudicko.com", role = c("aut", "cre")))
 Maintainer: Ahmadou Dicko <mail@ahmadoudicko.com>
-Description: 'ggplot2' themes and 'rmarkdown' templates to produce reproducible humanitarian data products.
+Description: 'ggplot2' themes inspired by OCHA graphics stylebook to produce reproducible humanitarian data products.
 URL: http://gitlab.com/dickoa/ochathemes
 BugReports: https://gitlab.com/dickoa/ochathemes/issues
 Copyright: file inst/COPYRIGHTS
@@ -21,11 +21,9 @@ Imports:
     grid,
     scales,
     knitr,
-    rmarkdown,
-    htmltools,
-    flexdashboard,
+    humicons,
     tools,
     magrittr
+LazyData: true    
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr
-LazyData: true
