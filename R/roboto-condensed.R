@@ -181,9 +181,9 @@ theme_ocha <- function(
 #' @export
 import_roboto_condensed <- function() {
 
-  rc_font_dir <- system.file("fonts", "roboto-condensed", package="ochathemes")
+  rc_font_dir <- system.file("fonts", "roboto-condensed", package = "ochathemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(rc_font_dir, prompt=FALSE)))
+  suppressWarnings(suppressMessages(extrafont::font_import(rc_font_dir, prompt = FALSE)))
 
   message(
     sprintf(
