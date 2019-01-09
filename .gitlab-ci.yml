@@ -10,7 +10,6 @@ pages:
 
   script:
     - Rscript -e 'install.packages(c("pkgdown", "ggplot2", "remotes", "testthat", "rmarkdown", "htmltools"))'
-    - Rscript -e 'remotes::install_gitlab("dickoa/humicons")'
     - Rscript -e 'remotes::install_gitlab("dickoa/ochathemes")'
     - Rscript -e 'pkgdown::build_site()'
     - mv docs public
