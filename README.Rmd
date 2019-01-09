@@ -67,6 +67,8 @@ This package is not on yet on CRAN and to install it, you will need the [`remote
 remotes::install_gitlab("dickoa/ochathemes")
 ```
 
+## Using icons from the `humicons` package
+
 ```{r}
 library(ochathemes)
 library(humicons)

@@ -22,6 +22,9 @@ This package is not on yet on CRAN and to install it, you will need the
     ## install.packages("remotes") 
     remotes::install_gitlab("dickoa/ochathemes")
 
+Using icons from the `humicons` package
+---------------------------------------
+
     library(ochathemes)
     library(humicons)
     library(ggplot2)
