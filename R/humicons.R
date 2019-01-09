@@ -20,21 +20,20 @@
 #' library(humicons)
 #' 
 #' ggplot(mtcars, aes(mpg, wt)) +
-#'     geom_text(family = font_hum, label = get_humicon("car"), size = 5)
+#'     geom_text(family = font_hum, label = humicons("car"), size = 5)
 #' }
 #' @export
 import_humanitarian_icons <- function() {
 
-  hum_font_dir <- system.file("fonts", "humanitarian-icons", package = "ochathemes")
+    hum_font_dir <- system.file("fonts", "humanitarian-icons", package = "ochathemes")
 
-  suppressWarnings(suppressMessages(extrafont::font_import(hum_font_dir, prompt=FALSE)))
+    suppressWarnings(suppressMessages(extrafont::font_import(hum_font_dir, prompt=FALSE)))
 
-  message(
-    sprintf(
-      "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
-      hum_font_dir)
-  )
-
+    message(
+        sprintf(
+            "You will likely need to install these fonts on your system as well.\n\nYou can find them in [%s]",
+            hum_font_dir)
+    )
 }
 
 #' @rdname HumantarianIcons

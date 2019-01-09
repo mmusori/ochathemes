@@ -29,6 +29,6 @@ library(ggplot2)
 library(humicons)
 
 ggplot(mtcars, aes(mpg, wt)) +
-    geom_text(family = font_hum, label = get_humicon("car"), size = 5)
+    geom_text(family = font_hum, label = humicons("car"), size = 5)
 }
 }

@@ -27,3 +27,4 @@ Imports:
 LazyData: true    
 RoxygenNote: 6.1.1
 VignetteBuilder: knitr
+Remotes: git::https://gitlab.com/dickoa/humicons.git
