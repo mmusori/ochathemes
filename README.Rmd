@@ -68,8 +68,17 @@ remotes::install_gitlab("dickoa/ochathemes")
 ```
 
 ```{r}
-library("ochathemes")
+library(ochathemes)
+library(humicons)
+library(ggplot2)
+
+ggplot(mtcars, aes(mpg, wt)) +
+    geom_text(family = font_hum, label = humicons("un-vehicle"), size = 7, color = "#418FDE") +
+    labs(title = "Using the UN-Vehicle icon in ggplot2", x = "", y = "") +
+    theme_ocha(grid = "XY")
 ```
+
+![](https://gitlab.com/dickoa/ochathemes/raw/master/inst/extdata/fig-1.png)
 
 ## Meta
 

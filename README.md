@@ -1,5 +1,5 @@
-
-# ochathemes
+ochathemes
+==========
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -10,27 +10,35 @@ Coverage](https://codecov.io/gl/dickoa/ochathemes/branch/master/graph/badge.svg)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-`ochathemes` is an UN OCHA inspired `ggplot2` themes
+`ochathemes` is package providing `ggplot2` themes and theme components
+inspired by OCHA graphics stylebook.
 
-## Installation
+Installation
+------------
 
 This package is not on yet on CRAN and to install it, you will need the
-[`devtools`](https://github.com/r-lib/devtools) package.
+[`remotes`](https://github.com/r-lib/remotes) package.
 
-``` r
-## install.packages("remotes") 
-remotes::install_gitlab("dickoa/ochathemes")
-```
+    ## install.packages("remotes") 
+    remotes::install_gitlab("dickoa/ochathemes")
 
-``` r
-library("ochathemes")
-```
+    library(ochathemes)
+    library(humicons)
+    library(ggplot2)
 
-## Meta
+    ggplot(mtcars, aes(mpg, wt)) +
+        geom_text(family = font_hum, label = humicons("un-vehicle"), size = 7, color = "#418FDE") +
+        labs(title = "Using the UN-Vehicle icon in ggplot2", x = "", y = "") +
+        theme_ocha(grid = "XY")
 
-  - Please [report any issues or
+![](https://gitlab.com/dickoa/ochathemes/raw/master/inst/extdata/fig-1.png)
+
+Meta
+----
+
+-   Please [report any issues or
     bugs](https://gitlab.dickoa/ochathemes/issues).
-  - License: MIT
-  - Please note that this project is released with a [Contributor Code
+-   License: MIT
+-   Please note that this project is released with a [Contributor Code
     of Conduct](CONDUCT.md). By participating in this project you agree
     to abide by its terms.
